@@ -5,7 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0XFFEB1555);
-
+const maleButton = 1;
+const femaleButton = 2;
 
 class InputPage extends StatefulWidget {
   @override
@@ -13,6 +14,21 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleColor = inactiveCardColor;
+  Color femaleColor = activeCardColor;
+
+  void updateColor(int gender) {
+   setState(() {
+     if (gender == 1) {
+       maleColor = activeCardColor;
+       femaleColor = inactiveCardColor;
+     } else {
+       maleColor = inactiveCardColor;
+       femaleColor = activeCardColor;
+     }
+   });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +42,14 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 CustomCard(
+                  onPress: () => updateColor(maleButton),
+                  bgColor: maleColor,
                   cardChild: ColumnGender('Male', FontAwesomeIcons.mars),
                 ),
                 CustomCard(
-                    cardChild: ColumnGender('Female', FontAwesomeIcons.venus)
-                ),
+                    onPress: () => updateColor(femaleButton),
+                    bgColor: femaleColor,
+                    cardChild: ColumnGender('Female', FontAwesomeIcons.venus)),
               ],
             ),
           ),
