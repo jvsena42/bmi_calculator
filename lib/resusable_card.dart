@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
-const activeCardColor = Color(0XFF1D1E33);
-const inactiveCardColor = Color(0XFF111328);
+import 'constants.dart';
 
 class CustomCard extends StatelessWidget {
-  CustomCard({this.bgColor = inactiveCardColor, this.cardChild, this.onPress});
+  CustomCard({this.bgColor = kInactiveCardColor, this.cardChild, this.onPress});
 
   final Color bgColor;
   final Widget? cardChild;

@@ -1,12 +1,9 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'constants.dart';
 
-const grayText = Color(0XFF8D8E98);
-const labelStyle = TextStyle(
-  fontSize: 18.0,
-  color: grayText,
-);
+
 const iconSize = 80.0;
 
 class ColumnGender extends StatelessWidget {
@@ -30,7 +27,7 @@ class ColumnGender extends StatelessWidget {
         ),
         Text(
           label,
-          style: labelStyle,
+          style: kLabelStyle,
         ),
       ],
     );
