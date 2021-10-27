@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'button_round.dart';
 import 'constants.dart';
 
 enum Gender { male, female }
@@ -17,6 +18,7 @@ class _InputPageState extends State<InputPage> {
   Color maleColor = kInactiveCardColor;
   Color femaleColor = kActiveCardColor;
   int height = 180;
+  int weight = 60;
 
   void updateColor(Gender gender) {
     setState(() {
@@ -96,7 +98,33 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                CustomCard(),
+                CustomCard(
+                  cardChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'WEIGHT',
+                        style: kLabelStyle,
+                      ),
+                      Text(
+                        weight.toString(),
+                        style: kNumberTextStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RoundIconButton(
+                            isAdd: false,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          RoundIconButton(),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
                 CustomCard(),
               ],
             ),
