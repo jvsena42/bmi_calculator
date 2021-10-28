@@ -115,11 +115,22 @@ class _InputPageState extends State<InputPage> {
                         children: [
                           RoundIconButton(
                             isAdd: false,
+                            onPress: () {
+                              setState(() {
+                                weight--;
+                              });
+                            },
                           ),
                           SizedBox(
                             width: 10.0,
                           ),
-                          RoundIconButton(),
+                          RoundIconButton(
+                            onPress: () {
+                              setState(() {
+                                weight++;
+                              });
+                            },
+                          ),
                         ],
                       )
                     ],
