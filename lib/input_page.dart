@@ -19,6 +19,7 @@ class _InputPageState extends State<InputPage> {
   Color femaleColor = kActiveCardColor;
   int height = 180;
   int weight = 60;
+  int age = 20;
 
   void updateColor(Gender gender) {
     setState(() {
@@ -136,7 +137,44 @@ class _InputPageState extends State<InputPage> {
                     ],
                   ),
                 ),
-                CustomCard(),
+                CustomCard(
+                  cardChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'AGE',
+                        style: kLabelStyle,
+                      ),
+                      Text(
+                        age.toString(),
+                        style: kNumberTextStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RoundIconButton(
+                            isAdd: false,
+                            onPress: () {
+                              setState(() {
+                                age--;
+                              });
+                            },
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          RoundIconButton(
+                            onPress: () {
+                              setState(() {
+                                age++;
+                              });
+                            },
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
