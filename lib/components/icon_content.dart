@@ -1,7 +1,7 @@
 
+import 'package:bmi_calculator/constants/constants.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'constants.dart';
 
 
 const iconSize = 80.0;
