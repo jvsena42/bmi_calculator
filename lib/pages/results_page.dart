@@ -14,21 +14,18 @@ class ResultsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.all(15.0),
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                "You Result",
-                style: kTitleTextStyle,
-              ),
+          Container(
+            padding: EdgeInsets.all(15.0),
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              "You Result",
+              style: kTitleTextStyle,
             ),
           ),
           Expanded(
-            flex: 5,
             child: CustomCard(
               bgColor: kActiveCardColor,
               cardChild: Column(
