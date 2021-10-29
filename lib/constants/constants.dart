@@ -5,7 +5,7 @@ const kBottomContainerHeight = 80.0;
 
 const kGrayText = Color(0XFF8D8E98);
 const kBottomContainerColor = Color(0XFFEB1555);
-const kActiveCardColor = Color(0XFF1D1E33);
+const kActiveCardColor = Color(0XFF242742);
 const kInactiveCardColor = Color(0XFF111328);
 const kGreen = Color(0xFF24D876);
 

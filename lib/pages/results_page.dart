@@ -38,7 +38,7 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    resultText,
+                    resultText.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
@@ -58,7 +58,7 @@ class ResultsPage extends StatelessWidget {
             onTap: (){
               Navigator.pop(context);
             },
-            buttonTitle: 'Calculate again',
+            buttonTitle: 'RE-CALCULATE',
           )
         ],
       ),
